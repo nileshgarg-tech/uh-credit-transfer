@@ -100,7 +100,7 @@ try {
     openai = new OpenAI({
       apiKey: openaiKey,
       baseURL: `${openaiEndpoint.replace(/\/$/, '')}/openai/deployments/${openaiDeployment}/`,
-      defaultQuery: { 'api-version': '2024-02-15-preview' },
+      defaultQuery: { 'api-version': '2024-08-01-preview' },
       defaultHeaders: {
         'api-key': openaiKey,
       },
@@ -190,16 +190,22 @@ Return only valid JSON, no other text.`;
         { role: "user", content: extractedText }
       ],
 
-              temperature: 0.1,
-        max_tokens: 2000
+      temperature: 0.1,
+      max_tokens: 4000
     });
 
-    const responseText = completion.choices[0].message.content;
+    const rawResponse = completion.choices[0].message.content;
 
     // Check if response is empty or null
-    if (!responseText || responseText.trim().length === 0) {
+    if (!rawResponse || rawResponse.trim().length === 0) {
       throw new Error('GPT returned empty response. The document may be too complex or unreadable.');
     }
+
+    // Strip markdown code fences if GPT wrapped the JSON (e.g. ```json ... ```)
+    const responseText = rawResponse
+      .replace(/^```(?:json)?\s*/i, '')
+      .replace(/\s*```$/,  '')
+      .trim();
 
     // Parse the JSON response
     const structuredData = JSON.parse(responseText);
@@ -212,13 +218,16 @@ Return only valid JSON, no other text.`;
     console.log(`GPT: processed ${structuredData.courses.length} courses for ${structuredData.studentName} (${structuredData.type})`);
     return structuredData;
   } catch (error) {
-    console.error('Error processing text with GPT:', error);
-    
-    if (error.message.includes('JSON')) {
+    console.error('GPT processing error:', error.message);
+    console.error('GPT error details:', JSON.stringify(error?.error ?? error?.response?.data ?? '', null, 2));
+
+    if (error.message.includes('JSON') || error instanceof SyntaxError) {
       throw new Error('Failed to parse course information. The document format may not be supported.');
     }
-    
-    throw new Error('Failed to process document with AI. Please try again.');
+
+    // Surface the actual API error message to help debugging
+    const detail = error?.error?.message || error?.message || 'unknown';
+    throw new Error(`Failed to process document with AI: ${detail}`);
   }
 }
 
