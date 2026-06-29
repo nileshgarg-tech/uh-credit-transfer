@@ -208,11 +208,29 @@ Return only valid JSON, no other text.`;
       .trim();
 
     // Parse the JSON response
-    const structuredData = JSON.parse(responseText);
-    
-    // Validate the structure
-    if (!structuredData.studentName || !structuredData.type || !structuredData.courses) {
-      throw new Error('Invalid response structure from GPT');
+    const raw = JSON.parse(responseText);
+
+    // Log exactly what GPT returned so we can debug field name mismatches
+    console.log('GPT raw structure keys:', Object.keys(raw));
+    console.log('GPT raw preview:', JSON.stringify(raw).slice(0, 300));
+
+    // Normalize — GPT sometimes uses different field names, handle all variations
+    const structuredData = {
+      studentName:
+        raw.studentName || raw.student_name || raw.name || raw.student || 'Unknown Student',
+      type:
+        String(raw.type || raw.document_type || raw.documentType || raw.transcriptType || 'CC')
+          .toUpperCase().includes('AP') ? 'AP' : 'CC',
+      courses: (raw.courses || raw.exams || raw.classes || raw.subjects || raw.records || []).map(c => ({
+        exam:        c.exam || c.course_code || c.courseCode || c.code || c.subject || c.name || '',
+        title:       c.title || c.course_title || c.courseTitle || c.description || c.name || '',
+        grade:       String(c.grade || c.score || c.mark || c.letterGrade || ''),
+        creditHours: Number(c.creditHours || c.credit_hours || c.credits || c.units || c.hours || 3),
+      })),
+    };
+
+    if (!structuredData.courses.length) {
+      throw new Error('GPT returned 0 courses — document may be unreadable or unsupported format.');
     }
 
     console.log(`GPT: processed ${structuredData.courses.length} courses for ${structuredData.studentName} (${structuredData.type})`);
