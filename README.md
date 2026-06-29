@@ -1,69 +1,69 @@
 # 🎓 UH Credit Transfer Estimator
 
-AI-powered University of Houston credit transfer evaluation for AP scores and Texas community college transcripts.
+> AI-powered transfer credit evaluation for University of Houston applicants — upload your AP score report or Texas community college transcript and instantly see how your credits map to UH courses.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure_AI-Document_Intelligence-0078D4?logo=microsoftazure&logoColor=white)
+![GPT-4](https://img.shields.io/badge/Azure_OpenAI-GPT--4-412991?logo=openai&logoColor=white)
 
-## 🚀 **Features**
+---
 
-- **📄 Document Processing**: Upload AP score reports or Texas CC transcripts (PDF)
-- **🤖 AI Extraction**: Azure Document Intelligence + GPT-4 for text processing
-- **🎯 UH Equivalency Matching**: Official University of Houston course equivalencies
-- **📊 Transfer Credit Summary**: Total credits, GPA calculation, course-by-case breakdown
-- **📱 Modern UI**: Beautiful, responsive design with shadcn/ui components
+## ✨ What It Does
 
-## 🏗️ **Architecture**
+1. **Upload** your AP score report or Texas CC transcript (PDF)
+2. **Extract** — Azure Document Intelligence reads the document
+3. **Interpret** — GPT-4 structures the raw text into course data
+4. **Match** — courses are mapped to official UH equivalencies
+5. **Display** — you get a clean transfer credit summary with total credits and GPA
 
-- **Frontend**: React + TypeScript + Vite + Tailwind CSS + shadcn/ui
-- **Backend**: Express.js + Azure Document Intelligence + Azure OpenAI
-- **Deployment**: Heroku-ready with one-click deploy
+---
 
-## 🎯 **How It Works**
+## 🏗️ Tech Stack
 
-1. **Upload**: Student uploads AP scores or CC transcript (PDF)
-2. **Extract**: Azure Document Intelligence extracts text from document
-3. **Process**: GPT-4 structures the text into course data
-4. **Match**: System matches courses with official UH equivalencies
-5. **Display**: Shows transfer credit summary with UH courses and total credits
+| Layer | Technology |
+|---|---|
+| Frontend | React 18 + TypeScript + Vite |
+| UI | Tailwind CSS + shadcn/ui + Framer Motion |
+| Backend | Node.js + Express |
+| OCR | Azure Document Intelligence (prebuilt-layout) |
+| AI | Azure OpenAI GPT-4 |
+| Compression | gzip via `compression` middleware |
 
-## 📋 **What's Supported**
+---
 
-### **AP Exams**
-- Biology, Chemistry, Physics
-- Calculus AB/BC, Statistics
-- English Language & Literature
-- US History, European History
-- Psychology, Economics
-- Computer Science A/AB
+## 📋 Supported Documents
+
+### AP Exams
+- Biology, Chemistry, Physics (1, 2, C)
+- Calculus AB / BC, Statistics
+- English Language & Composition / Literature
+- US History, European History, World History
+- Psychology, Macro/Microeconomics
+- Computer Science A
 - Foreign Languages (Spanish, French, German, etc.)
 
-### **Texas Community Colleges**
+### Texas Community Colleges
 - Houston Community College (HCC)
 - Lone Star College
 - San Jacinto College
-- And more via TCCNS course codes
+- All Texas colleges using TCCNS course codes
 
-## 🔧 **Environment Variables**
+---
 
-```env
-VITE_AZURE_DOCUMENT_ENDPOINT=https://your-endpoint.cognitiveservices.azure.com/
-VITE_AZURE_DOCUMENT_KEY=your-azure-key
-VITE_OPENAI_KEY=your-openai-key
-VITE_OPENAI_ENDPOINT=https://uhopenai.openai.azure.com/
-VITE_OPENAI_DEPLOYMENT=gpt-4
-```
+## 🚀 Local Development
 
-## 🚀 **Quick Deploy to Heroku**
+### Prerequisites
+- Node.js 18+
+- Azure Document Intelligence resource
+- Azure OpenAI resource with a GPT-4 deployment
 
-1. **Click the Deploy button above**
-2. **Fill in your Azure & OpenAI credentials**
-3. **Deploy!** Your app will be live in minutes
-
-## 💻 **Local Development**
+### Setup
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/uh-credit-transfer
+# Clone the repo
+git clone https://github.com/nileshgarg-tech/uh-credit-transfer.git
 cd uh-credit-transfer
 
 # Install dependencies
@@ -71,78 +71,96 @@ npm install
 
 # Create environment file
 cp .env.example .env.local
-# Add your Azure & OpenAI credentials
+```
 
-# Start development servers
+Edit `.env.local` with your credentials:
+
+```env
+VITE_AZURE_DOCUMENT_ENDPOINT=https://your-resource.cognitiveservices.azure.com/
+VITE_AZURE_DOCUMENT_KEY=your_azure_document_key
+VITE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+VITE_OPENAI_KEY=your_azure_openai_key
+VITE_OPENAI_DEPLOYMENT=gpt-4
+```
+
+```bash
+# Start both frontend and backend
 npm run dev
 ```
 
-Runs frontend on `http://localhost:5173` and backend on `http://localhost:3001`
-
-## 📁 **Project Structure**
-
-```
-uh-credit-transfer/
-├── src/                    # React frontend
-│   ├── components/         # UI components
-│   ├── lib/               # Utilities
-│   └── App.tsx            # Main app
-├── server.js              # Express backend
-├── ap_equivalency.json    # AP exam equivalencies
-├── tccns_equivalency.json # Community college equivalencies
-├── Procfile              # Heroku configuration
-├── app.json              # Heroku one-click deploy
-└── package.json          # Dependencies
-```
-
-## 🎯 **Key Features**
-
-### **Accurate Equivalencies**
-- Based on official UH publications
-- AP Credit by Exam table
-- TCCNS community college equivalencies
-
-### **Smart Processing**
-- Handles various transcript formats
-- Extracts course codes, titles, grades, credit hours
-- Calculates transfer GPA for community college courses
-
-### **Modern UI**
-- Clean, professional design
-- Mobile-responsive
-- Real-time processing feedback
-- Detailed transfer credit breakdown
-
-## 🔍 **Example Results**
-
-### **AP Biology Score 5**
-- **UH Course**: BIOL 1161 + BIOL 1162 + BIOL 1361 + BIOL 1362
-- **Credits**: 8
-- **Grade**: S (Satisfactory)
-
-### **HCC ENGL 1301 (Grade: A)**
-- **UH Course**: ENGL 1303
-- **Credits**: 3
-- **Grade Points**: 4.0
-
-## 🤝 **Contributing**
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
-
-## 📄 **License**
-
-This project is licensed under the MIT License.
-
-## 🆘 **Support**
-
-- Check [HEROKU_DEPLOY.md](./HEROKU_DEPLOY.md) for deployment help
-- Review [deployment-guide.md](./deployment-guide.md) for other platforms
-- Open an issue for bugs or feature requests
+- Frontend: `http://localhost:5173`
+- Backend API: `http://localhost:3001`
 
 ---
 
-**Built for University of Houston students to estimate transfer credits** 🐾 
+## 📁 Project Structure
+
+```
+uh-credit-transfer/
+├── src/
+│   ├── components/
+│   │   ├── ui/               # shadcn/ui base components
+│   │   ├── UploadCard.tsx    # PDF drag-and-drop upload
+│   │   ├── TransferSummaryCard.tsx
+│   │   ├── StructuredResultsCard.tsx
+│   │   └── ...
+│   ├── hooks/
+│   │   └── use-theme.tsx     # Dark/light mode
+│   └── lib/
+│       ├── documentService.ts # Frontend API client
+│       └── utils.ts
+├── server.js                 # Express backend
+├── ap_equivalency.json       # AP exam → UH course mappings
+├── tccns_equivalency.json    # TCCNS → UH course mappings
+├── Procfile                  # Heroku deployment
+└── railway.json              # Railway deployment
+```
+
+---
+
+## ☁️ Deployment
+
+This project is pre-configured for one-click deployment on **Heroku** and **Railway**.
+
+### Railway (Recommended — free tier available)
+
+```bash
+npm install -g @railway/cli
+railway login
+railway init
+railway up
+```
+
+Set your environment variables in the Railway dashboard under **Variables**.
+
+### Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Click the button above or see [HEROKU_DEPLOY.md](./HEROKU_DEPLOY.md) for step-by-step instructions.
+
+---
+
+## 🔍 Example Output
+
+**AP Calculus BC — Score 5**
+- UH Equivalent: `MATH 1431 + MATH 1432`
+- Credits: 8
+- Grade: S (Satisfactory)
+
+**HCC ENGL 1301 — Grade A**
+- UH Equivalent: `ENGL 1303`
+- Credits: 3
+- Grade Points: 4.0
+
+---
+
+## ⚠️ Disclaimer
+
+This tool provides **estimates only**. Official transfer credit evaluations are determined by the University of Houston Office of Admissions. Always verify your transfer credits with a UH academic advisor.
+
+---
+
+## 📄 License
+
+MIT — built for University of Houston students 🐾
