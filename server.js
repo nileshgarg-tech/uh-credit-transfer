@@ -155,12 +155,12 @@ function extractTextFromDocument(result) {
 // Helper function to process extracted text with GPT
 async function processTextWithGPT(extractedText) {
   try {
-    const systemPrompt = `Extract course information from this college transcript. Return valid JSON only.
+    const systemPrompt = `Extract course information from this college transcript or AP score report. Return valid JSON only.
 
 Extract:
-1. Student name
-2. Document type ("AP" for AP scores, "CC" for community college)  
-3. All courses with: course code, title, grade, and credit hours
+1. Student name (if blurred, redacted, or not visible, use "Unknown Student")
+2. Document type: use "AP" for AP exam score reports, "CC" for community college transcripts
+3. All courses/exams with: course code, title, grade, and credit hours
 
 JSON format:
 {
@@ -169,14 +169,18 @@ JSON format:
   "courses": [
     {
       "exam": "COURSE CODE",
-      "title": "Course Title", 
+      "title": "Course Title",
       "grade": "A",
       "creditHours": 3
     }
   ]
 }
 
-Return only valid JSON, no other text.`;
+Important rules:
+- If student name is blurred, hidden, or unreadable, set studentName to "Unknown Student"
+- Always include the "type" field — either "AP" or "CC"
+- Always include the "courses" array even if empty
+- Return ONLY valid JSON, no markdown, no explanation, no other text`;
 
     console.log(`Sending ${extractedText.length} chars to OpenAI...`);
     
