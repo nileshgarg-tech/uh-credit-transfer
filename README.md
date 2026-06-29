@@ -159,13 +159,12 @@ Click the button above or see [HEROKU_DEPLOY.md](./HEROKU_DEPLOY.md) for step-by
 
 Real sample PDFs are included in the [`samples/`](./samples/) folder so you can test the app right away:
 
-| File | Type | College |
+| File | Type | Source |
 |---|---|---|
-| `HCC_Transcript_Sample.pdf` | Community College | Houston Community College |
-| `Lone_Star_CC_Sample.pdf` | Community College | Lone Star College |
-| `San_Jacinto_CC_Sample.pdf` | Community College | San Jacinto College |
-
-> AP score report samples are not included for privacy reasons — you can use your own.
+| `AP_Score_Report_Sample.pdf` | AP Exam Score Report | College Board |
+| `HCC_Transcript_Sample.pdf` | Community College Transcript | Houston Community College |
+| `Lone_Star_CC_Sample.pdf` | Community College Transcript | Lone Star College |
+| `San_Jacinto_CC_Sample.pdf` | Community College Transcript | San Jacinto College |
 
 ---
 
