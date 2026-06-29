@@ -1,0 +1,50 @@
+{
+  "name": "UH Credit Transfer Estimator",
+  "description": "University of Houston Credit Transfer Estimator - AI-powered AP and Community College credit evaluation",
+  "repository": "https://github.com/yourusername/uh-credit-transfer",
+  "logo": "https://www.uh.edu/brand-guidelines/_images/downloads/brand-elements/university-of-houston-logo-suite/universityofhouston_logo-stacked_secondary-print.png",
+  "keywords": ["uh", "university-of-houston", "credit-transfer", "ap-scores", "community-college", "azure", "openai"],
+  "stack": "heroku-22",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "VITE_AZURE_DOCUMENT_ENDPOINT": {
+      "description": "Azure Document Intelligence endpoint URL",
+      "required": true
+    },
+    "VITE_AZURE_DOCUMENT_KEY": {
+      "description": "Azure Document Intelligence API key",
+      "required": true
+    },
+    "VITE_OPENAI_KEY": {
+      "description": "Azure OpenAI API key",
+      "required": true
+    },
+    "VITE_OPENAI_ENDPOINT": {
+      "description": "Azure OpenAI endpoint URL (e.g., https://uhopenai.openai.azure.com/)",
+      "required": true
+    },
+    "VITE_OPENAI_DEPLOYMENT": {
+      "description": "OpenAI deployment name",
+      "value": "gpt-4",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo 'UH Credit Transfer app deployed successfully!'"
+  }
+} 

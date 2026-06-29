@@ -1,0 +1,77 @@
+{
+  "ENGL 1301": { "uhCourse": "ENGL 1303", "credits": 3, "description": "First Year Writing I" },
+  "ENGL 1302": { "uhCourse": "ENGL 1304", "credits": 3, "description": "First Year Writing II" },
+  
+  "BIOL 1308": { "uhCourse": "BIOL 1310", "credits": 3, "description": "General Biology I" },
+  "BIOL 1309": { "uhCourse": "BIOL 1320", "credits": 3, "description": "General Biology II" },
+  "BIOL 1406": { "uhCourse": "BIOL 1361 + BIOL 1161", "credits": 4, "description": "Intro to Biological Science with Lab" },
+  "BIOL 1407": { "uhCourse": "BIOL 1362 + BIOL 1162", "credits": 4, "description": "Intro to Biological Science II with Lab" },
+  
+  "CHEM 1311": { "uhCourse": "CHEM 1331", "credits": 3, "description": "Fundamentals of Chemistry" },
+  "CHEM 1312": { "uhCourse": "CHEM 1332 + CHEM 1112", "credits": 4, "description": "Fundamentals of Chemistry II and Lab" },
+  "CHEM 1411": { "uhCourse": "CHEM 1331 + CHEM 1111", "credits": 4, "description": "Fundamentals of Chemistry I and Lab" },
+  "CHEM 1412": { "uhCourse": "CHEM 1332 + CHEM 1112", "credits": 4, "description": "Fundamentals of Chemistry II and Lab" },
+  "CHEM 1413": { "uhCourse": "CHEM 1302 + CHEM 1102", "credits": 4, "description": "Foundations of Chemistry with Lab" },
+  "CHEM 1414": { "uhCourse": "CHEM 1302 + CHEM 1102", "credits": 4, "description": "General Organic Chemistry with Lab" },
+  
+  "COSC 1436": { "uhCourse": "COSC 1410", "credits": 4, "description": "Introduction to Computer Science I" },
+  "COSC 1437": { "uhCourse": "COSC 1320", "credits": 3, "description": "Introduction to Computer Science II" },
+  "COSC 2425": { "uhCourse": "COSC 2410", "credits": 4, "description": "Computer Organization and Programming" },
+  "COSC 2436": { "uhCourse": "COSC 2320", "credits": 3, "description": "Data Structures" },
+  
+  "GEOL 1303": { "uhCourse": "GEOL 1330", "credits": 3, "description": "Physical Geology" },
+  "GEOL 1304": { "uhCourse": "GEOL 1376", "credits": 3, "description": "Historical Geology" },
+  "GEOL 1403": { "uhCourse": "GEOL 1330 + GEOL 1130", "credits": 4, "description": "Physical Geology and Lab" },
+  "GEOL 1404": { "uhCourse": "GEOL 1376 + GEOL 1176", "credits": 4, "description": "Historical Geology and Lab" },
+  
+  "PHYS 1301": { "uhCourse": "PHYS 1301", "credits": 3, "description": "Introductory General Physics I" },
+  "PHYS 1302": { "uhCourse": "PHYS 1302", "credits": 3, "description": "Introductory General Physics II" },
+  "PHYS 1401": { "uhCourse": "PHYS 1301 + PHYS 1101", "credits": 4, "description": "Introductory General Physics and Lab" },
+  "PHYS 1402": { "uhCourse": "PHYS 1302 + PHYS 1102", "credits": 4, "description": "General Physics and Lab" },
+  "PHYS 2325": { "uhCourse": "PHYS 1321", "credits": 3, "description": "University Physics I" },
+  "PHYS 2326": { "uhCourse": "PHYS 1322", "credits": 3, "description": "University Physics II" },
+  
+  "MATH 1314": { "uhCourse": "MATH 1310", "credits": 3, "description": "College Algebra" },
+  "MATH 1324": { "uhCourse": "MATH 1313", "credits": 3, "description": "Finite Mathematics with Applications" },
+  "MATH 1325": { "uhCourse": "MATH 1314", "credits": 3, "description": "Calculus for Business and the Life Sciences" },
+  "MATH 1342": { "uhCourse": "MATH 2311", "credits": 3, "description": "Introduction to Probability and Statistics" },
+  "MATH 2312": { "uhCourse": "MATH 1330", "credits": 3, "description": "Precalculus" },
+  "MATH 2412": { "uhCourse": "MATH 1330", "credits": 4, "description": "Elementary Functions" },
+  "MATH 2413": { "uhCourse": "MATH 1431", "credits": 4, "description": "Calculus I" },
+  
+  "PHIL 2303": { "uhCourse": "PHIL 1321", "credits": 3, "description": "Logic I" },
+  
+  "ANTH 2301": { "uhCourse": "ANTH 2301", "credits": 3, "description": "Introduction to Physical Anthropology" },
+  "ANTH 2302": { "uhCourse": "ANTH 2303", "credits": 3, "description": "Introduction to Archaeology" },
+  "ANTH 2346": { "uhCourse": "ANTH 1300", "credits": 3, "description": "Introduction to Anthropology" },
+  "ANTH 2351": { "uhCourse": "ANTH 2302", "credits": 3, "description": "Introduction to Cultural Anthropology" },
+  
+  "ECON 2301": { "uhCourse": "ECON 2305", "credits": 3, "description": "Macroeconomic Principles" },
+  "ECON 2302": { "uhCourse": "ECON 2304", "credits": 3, "description": "Microeconomic Principles" },
+  
+  "PSYC 2301": { "uhCourse": "PSYC 1300", "credits": 3, "description": "Introduction to Psychology" },
+  
+  "SOCI 1301": { "uhCourse": "SOC 1300", "credits": 3, "description": "Introduction to Sociology" },
+  "SOCI 1306": { "uhCourse": "SOC 2310", "credits": 3, "description": "Social Problems" },
+  
+  "ARTS 1303": { "uhCourse": "ARTH 1380", "credits": 3, "description": "History of Art I" },
+  "ARTS 1304": { "uhCourse": "ARTH 1381", "credits": 3, "description": "History of Art II" },
+  
+  "DRAM 1310": { "uhCourse": "THEA 1331", "credits": 3, "description": "Introduction to the Theatre" },
+  
+  "ENGL 2332": { "uhCourse": "ENGL 2301", "credits": 3, "description": "Western World Literature I" },
+  "ENGL 2333": { "uhCourse": "ENGL 2301", "credits": 3, "description": "Western World Literature II" },
+  "ENGL 2342": { "uhCourse": "ENGL 2305", "credits": 3, "description": "Introduction to Fiction" },
+  
+  "HIST 2311": { "uhCourse": "HIST 2351", "credits": 3, "description": "Western Civilization to 1450" },
+  "HIST 2312": { "uhCourse": "HIST 2353", "credits": 3, "description": "Western Civilization from 1450" },
+  
+  "PHIL 1301": { "uhCourse": "PHIL 1301", "credits": 3, "description": "Introduction to Philosophy" },
+  "PHIL 2306": { "uhCourse": "PHIL 1305", "credits": 3, "description": "Introduction to Ethics" },
+  
+  "HIST 1301": { "uhCourse": "HIST 1377", "credits": 3, "description": "The United States to 1877" },
+  "HIST 1302": { "uhCourse": "HIST 1378", "credits": 3, "description": "The United States Since 1877" },
+  
+  "GOVT 2301": { "uhCourse": "POLS 1336", "credits": 3, "description": "U.S. and Texas Constitutions and Politics" },
+  "GOVT 2302": { "uhCourse": "POLS 1337", "credits": 3, "description": "U.S. Government: Congress, President and Courts" }
+} 

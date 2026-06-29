@@ -1,0 +1,94 @@
+{
+  "Biology|3": { "uhCourse": "BIOL 1161 + BIOL 1162 + BIOL 1361 + BIOL 1362", "credits": 8, "description": "Complete Biology sequence with labs" },
+  "Biology|4": { "uhCourse": "BIOL 1161 + BIOL 1162 + BIOL 1361 + BIOL 1362", "credits": 8, "description": "Complete Biology sequence with labs" },
+  "Biology|5": { "uhCourse": "BIOL 1161 + BIOL 1162 + BIOL 1361 + BIOL 1362", "credits": 8, "description": "Complete Biology sequence with labs" },
+  
+  "Calculus AB|3": { "uhCourse": "No Credit", "credits": 0, "description": "Score too low for credit" },
+  "Calculus AB|4": { "uhCourse": "MATH 1431", "credits": 4, "description": "Calculus I" },
+  "Calculus AB|5": { "uhCourse": "MATH 1431", "credits": 4, "description": "Calculus I" },
+  
+  "Calculus BC|3": { "uhCourse": "MATH 1431", "credits": 4, "description": "Calculus I only" },
+  "Calculus BC|4": { "uhCourse": "MATH 1431 + MATH 1432", "credits": 8, "description": "Calculus I and II" },
+  "Calculus BC|5": { "uhCourse": "MATH 1431 + MATH 1432", "credits": 8, "description": "Calculus I and II" },
+  
+  "Chemistry|4": { "uhCourse": "CHEM 1331", "credits": 3, "description": "Fundamentals of Chemistry" },
+  "Chemistry|5": { "uhCourse": "CHEM 1331 + CHEM 1332", "credits": 6, "description": "Complete General Chemistry sequence" },
+  
+  "Computer Science A|4": { "uhCourse": "COSC 1410", "credits": 4, "description": "Introduction to Computer Science I" },
+  "Computer Science A|5": { "uhCourse": "COSC 1410", "credits": 4, "description": "Introduction to Computer Science I" },
+  
+  "Computer Science AB|3": { "uhCourse": "COSC 1410", "credits": 4, "description": "Introduction to Computer Science I" },
+  "Computer Science AB|4": { "uhCourse": "COSC 1410 + COSC 2320", "credits": 7, "description": "Computer Science I and II" },
+  "Computer Science AB|5": { "uhCourse": "COSC 1410 + COSC 2320", "credits": 7, "description": "Computer Science I and II" },
+  
+  "English Language and Composition|3": { "uhCourse": "ENGL 1303", "credits": 3, "description": "First Year Writing I" },
+  "English Language and Composition|4": { "uhCourse": "ENGL 1303 + ENGL 1304", "credits": 6, "description": "Complete English sequence" },
+  "English Language and Composition|5": { "uhCourse": "ENGL 1303 + ENGL 1304", "credits": 6, "description": "Complete English sequence" },
+  
+  "English Literature and Composition|3": { "uhCourse": "ENGL 2316", "credits": 3, "description": "Literature course" },
+  "English Literature and Composition|4": { "uhCourse": "ENGL 2316", "credits": 3, "description": "Literature course" },
+  "English Literature and Composition|5": { "uhCourse": "ENGL 2316", "credits": 3, "description": "Literature course" },
+  
+  "Art History|5": { "uhCourse": "ARTH 1380", "credits": 3, "description": "History of Art I" },
+  "Art History|4": { "uhCourse": "ARTH 1381", "credits": 3, "description": "History of Art II" },
+  
+  "Physics B|5": { "uhCourse": "PHYS 1301 + PHYS 1302", "credits": 6, "description": "Introductory General Physics sequence" },
+  
+  "Physics C: Mechanics|4": { "uhCourse": "PHYS 1301", "credits": 3, "description": "Introductory General Physics I" },
+  "Physics C: Mechanics|5": { "uhCourse": "PHYS 1321", "credits": 3, "description": "University Physics I" },
+  
+  "Physics C: Electricity and Magnetism|4": { "uhCourse": "PHYS 1302", "credits": 3, "description": "Introductory General Physics II" },
+  "Physics C: Electricity and Magnetism|5": { "uhCourse": "PHYS 1322", "credits": 3, "description": "University Physics II" },
+  
+  "Psychology|3": { "uhCourse": "PSYC 1300", "credits": 3, "description": "Introduction to Psychology" },
+  "Psychology|4": { "uhCourse": "PSYC 1300", "credits": 3, "description": "Introduction to Psychology" },
+  "Psychology|5": { "uhCourse": "PSYC 1300", "credits": 3, "description": "Introduction to Psychology" },
+  
+  "Statistics|3": { "uhCourse": "MATH 2311", "credits": 3, "description": "Introduction to Probability and Statistics" },
+  "Statistics|4": { "uhCourse": "MATH 2311", "credits": 3, "description": "Introduction to Probability and Statistics" },
+  "Statistics|5": { "uhCourse": "MATH 2311", "credits": 3, "description": "Introduction to Probability and Statistics" },
+  
+  "United States History|3": { "uhCourse": "HIST 1377", "credits": 3, "description": "The United States to 1877" },
+  "United States History|4": { "uhCourse": "HIST 1377 + HIST 1378", "credits": 6, "description": "Complete US History sequence" },
+  "United States History|5": { "uhCourse": "HIST 1377 + HIST 1378", "credits": 6, "description": "Complete US History sequence" },
+  
+  "United States Government and Politics|3": { "uhCourse": "POLS 1337", "credits": 3, "description": "U.S. Government: Congress, President and Courts" },
+  "United States Government and Politics|4": { "uhCourse": "POLS 1336 + POLS 1337", "credits": 6, "description": "Complete Government sequence (requires passing UH test)" },
+  "United States Government and Politics|5": { "uhCourse": "POLS 1336 + POLS 1337", "credits": 6, "description": "Complete Government sequence (requires passing UH test)" },
+  
+  "Comparative Government and Politics|5": { "uhCourse": "POLS 3311", "credits": 3, "description": "Comparative Government" },
+  
+  "Microeconomics|3": { "uhCourse": "ECON 2304", "credits": 3, "description": "Microeconomic Principles" },
+  "Microeconomics|4": { "uhCourse": "ECON 2304", "credits": 3, "description": "Microeconomic Principles" },
+  "Microeconomics|5": { "uhCourse": "ECON 2304", "credits": 3, "description": "Microeconomic Principles" },
+  
+  "Macroeconomics|3": { "uhCourse": "ECON 2305", "credits": 3, "description": "Macroeconomic Principles" },
+  "Macroeconomics|4": { "uhCourse": "ECON 2305", "credits": 3, "description": "Macroeconomic Principles" },
+  "Macroeconomics|5": { "uhCourse": "ECON 2305", "credits": 3, "description": "Macroeconomic Principles" },
+  
+  "European History|3": { "uhCourse": "HIST 2353", "credits": 3, "description": "Western Civilization from 1450" },
+  "European History|4": { "uhCourse": "HIST 2353", "credits": 3, "description": "Western Civilization from 1450" },
+  "European History|5": { "uhCourse": "HIST 2353", "credits": 3, "description": "Western Civilization from 1450" },
+  
+  "Spanish Language|3": { "uhCourse": "SPAN 1505", "credits": 5, "description": "Elementary Spanish" },
+  "Spanish Language|4": { "uhCourse": "SPAN 1505 + SPAN 2301", "credits": 8, "description": "Spanish through Intermediate I" },
+  "Spanish Language|5": { "uhCourse": "SPAN 1505 + SPAN 2301 + SPAN 2302", "credits": 11, "description": "Spanish through Intermediate II" },
+  
+  "French Language|3": { "uhCourse": "FREN 2301 + FREN 2302", "credits": 6, "description": "Intermediate French sequence" },
+  "French Language|4": { "uhCourse": "FREN 2301 + FREN 2302 + FREN 3313", "credits": 9, "description": "French through Advanced" },
+  "French Language|5": { "uhCourse": "FREN 2301 + FREN 2302 + FREN 3313", "credits": 9, "description": "French through Advanced" },
+  
+  "French Literature|3": { "uhCourse": "FREN 2301 + FREN 2302", "credits": 6, "description": "Intermediate French sequence" },
+  "French Literature|4": { "uhCourse": "FREN 2301 + FREN 2302 + FREN 3313", "credits": 9, "description": "French through Advanced" },
+  "French Literature|5": { "uhCourse": "FREN 2301 + FREN 2302 + FREN 3313", "credits": 9, "description": "French through Advanced" },
+  
+  "German Language|4": { "uhCourse": "GERM 2332", "credits": 3, "description": "Intermediate German II" },
+  "German Language|5": { "uhCourse": "GERM 2332 + GERM 3333", "credits": 6, "description": "German through Advanced I" },
+  
+  "Chinese Language and Culture|4": { "uhCourse": "CHNS 2301", "credits": 3, "description": "Intermediate Chinese I" },
+  "Chinese Language and Culture|5": { "uhCourse": "CHNS 2301 + CHNS 2302", "credits": 6, "description": "Intermediate Chinese sequence" },
+  
+  "Italian Language and Culture|3": { "uhCourse": "ITAL 1501 + ITAL 1502", "credits": 10, "description": "Elementary Italian sequence" },
+  "Italian Language and Culture|4": { "uhCourse": "ITAL 1501 + ITAL 1502 + ITAL 2301", "credits": 13, "description": "Italian through Intermediate I" },
+  "Italian Language and Culture|5": { "uhCourse": "ITAL 1501 + ITAL 1502 + ITAL 2301 + ITAL 2302", "credits": 16, "description": "Complete Italian sequence (capped at 13 credits)" }
+} 
